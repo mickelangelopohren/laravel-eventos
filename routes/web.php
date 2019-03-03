@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'EventoController@index')->name('index');
+Route::get('/detalhes/{id}', 'EventoController@detalhes')->name('detalhes');
+Route::get('/comprar/{id}', 'EventoController@comprar')->name('comprar');
